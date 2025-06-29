@@ -1,0 +1,296 @@
+// Обнулення стилів
+@import url("reset.css");
+@import url("iconsfont.css");
+@import url("https://fonts.googleapis.com/css?family=Manrope:regular,600,700,800&display=swap");
+
+//--Загальні стилі--//
+body {
+  background-color: #141414;
+  line-height: 1.5;
+  font-size: 0.875rem;
+  font-family: "Manrope", sans-serif;
+  color: #999;
+
+  @media (min-width: 48em) and (max-width: 101.875em) {
+    font-size: 1rem;
+  }
+  @media (min-width: 101.875em) {
+    font-size: 1.125rem;
+  }
+
+  opacity: 0;
+  transition: opacity 1.5s;
+  .loaded & {
+    opacity: 1;
+  }
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: clip; /* clip */
+  display: flex;
+  flex-direction: column;
+}
+.wrapper > main {
+  flex-grow: 1;
+}
+
+// /------------------------------/
+
+[class*="__container"] {
+  padding-inline: 0.9375rem;
+  @media (min-width: 62.06125em) {
+    margin: 0 auto;
+    padding-inline: 2.5rem;
+    max-width: 85rem;
+  }
+  @media (min-width: 90.06125em) {
+    padding-inline: 5rem;
+    max-width: 110rem;
+  }
+}
+
+// ------   Компоненти   ------//
+
+@import "_components.scss";
+@import "_header.scss";
+@import "_footer.scss";
+@import "_slider.scss";
+@import "_faq.scss";
+@import "_plans.scss";
+@import "_form.scss";
+
+// ------   Сторінки   ------//
+
+@import "_movies_&_shows.scss";
+@import "_support_page.scss";
+@import "_subscriptions.scss";
+
+//-------  Стилі основної частини  ------//
+
+// ==============  hero  =================
+
+.hero {
+  padding-block-end: 3.125rem;
+
+  @media (min-width: 48em) and (max-width: 101.875em) {
+    padding-block-end: 4.6875rem;
+  }
+  @media (min-width: 101.875em) {
+    padding-block-end: 6.25rem;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    gap: 1.875rem;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 7.5rem;
+    min-block-size: 100svh;
+  }
+
+  &__play {
+    z-index: 3;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+    aspect-ratio: 1 / 1;
+    block-size: 43vmin;
+  }
+
+  &__content {
+    inline-size: 100%;
+    text-align: center;
+    position: relative;
+    &::after {
+      content: "";
+      z-index: 2;
+      block-size: 150%; /* 581/860 */
+      position: absolute;
+      inset-inline-start: 0;
+      inline-size: 100%;
+      background: linear-gradient(to top, #141414 50%, rgba(20, 20, 20, 0) 100%);
+      inset-block-end: 0;
+    }
+  }
+
+  &__background {
+    position: absolute;
+    inset-inline-end: 0;
+    inset-block-start: 0;
+    inline-size: 100vw;
+    min-block-size: 100svh;
+    &::before {
+      content: "";
+      z-index: 2;
+      block-size: 67.55814%; /* 581/860 */
+      position: absolute;
+      inset-inline-start: 0;
+      inset-block-start: 0;
+      background: linear-gradient(to bottom, #141414 0%, rgba(20, 20, 20, 0) 100%);
+      inline-size: 100%;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+}
+
+.section-heading--hero {
+  position: relative;
+  z-index: 3;
+  max-inline-size: 68.4375rem;
+  margin-inline: auto;
+}
+
+.section-heading {
+  &__title--big {
+    color: #fff;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 87px */
+    margin-bottom: 0.625rem;
+
+    @media (min-width: 48em) and (max-width: 101.875em) {
+      font-size: 3rem;
+    }
+    @media (min-width: 101.875em) {
+      font-size: 3.625rem;
+      margin-bottom: 0.875rem;
+    }
+  }
+
+  &__text-hero {
+    margin-bottom: 1.875rem;
+    @media (min-width: 48em) and (max-width: 101.875em) {
+      margin-bottom: 2.5rem;
+    }
+    @media (min-width: 101.875em) {
+      margin-bottom: 3.125rem;
+    }
+  }
+}
+
+// ==============  slider  =================
+
+.slider--page-home {
+  padding-block-start: 3.125rem;
+  padding-block-end: 1.5625rem;
+
+  @media (min-width: 48em) and (max-width: 101.875em) {
+    padding-block-start: 4.6875rem;
+    padding-block-end: 3.75rem;
+  }
+  @media (min-width: 101.875em) {
+    padding-block-start: 6.25rem;
+    padding-block-end: 4.6875rem;
+  }
+}
+
+////-----  devices  -------//////
+.devices {
+  padding-block: 2.5rem;
+
+  @media (min-width: 48em) and (max-width: 101.875em) {
+    padding-block: 3.75rem;
+  }
+  @media (min-width: 101.875em) {
+    padding-block: 4.6875rem;
+  }
+
+  &__heading-section {
+    margin-bottom: 5rem;
+
+    @media (min-width: 48em) and (max-width: 101.875em) {
+      margin-bottom: 3.75rem;
+    }
+    @media (max-width: 48em) {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 2.375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 57px */
+    margin-bottom: 0.875rem;
+  }
+
+  &__cards {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(15.625rem, 32%, 100%), 1fr));
+
+    @media (min-width: 101.875em) {
+      gap: 1.875rem;
+    }
+  }
+
+  &__card {
+    padding: 3.125rem;
+    border-radius: 0.75rem;
+    border: 1px solid #262626;
+    background: linear-gradient(222deg, rgba(229, 0, 0, 0.5) -208.03%, rgba(229, 0, 0, 0) 41.32%), #0f0f0f;
+  }
+}
+
+.section-heading {
+  &__title {
+    margin-bottom: 0.875rem;
+  }
+}
+
+.card {
+  &__heading {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.875rem;
+    align-items: center;
+  }
+
+  &__icon {
+    aspect-ratio: 1 / 1;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    border: 0.0625rem solid #1f1f1f;
+    background: #141414;
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 36px */
+    @media (min-width: 48em) and (max-width: 101.875em) {
+      font-size: 1.25rem;
+    }
+    @media (min-width: 101.875em) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+// ========== plans ===========
+
+.section-heading--home {
+  @media (max-width: 48em) {
+    margin-bottom: 1.25rem;
+  }
+}

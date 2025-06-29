@@ -1,0 +1,129 @@
+.faq {
+  padding-block-start: 3.125rem;
+  padding-block-end: 1.5625rem;
+
+  @media (min-width: 48em) and (max-width: 101.875em) {
+    padding-block-start: 4.6875rem;
+    padding-block-end: 3.75rem;
+  }
+  @media (min-width: 101.875em) {
+    padding-block-start: 6.25rem;
+    padding-block-end: 4.6875rem;
+  }
+
+  &__container {
+  }
+
+  &__header {
+    display: flex;
+    gap: 0.9375rem;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2.5rem;
+
+    @media (min-width: 48em) and (max-width: 101.875em) {
+      margin-bottom: 3.75rem;
+    }
+    @media (min-width: 101.875em) {
+      margin-bottom: 5rem;
+    }
+
+    @media (max-width: 48em) {
+      display: block;
+    }
+  }
+
+  &__heading-section {
+    @media (max-width: 48em) {
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  &__button {
+    align-self: flex-end;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(31.25rem, 100%), 1fr));
+    column-gap: 1.25rem;
+    @media (min-width: 48em) and (max-width: 101.875em) {
+      column-gap: 2.5rem;
+    }
+    @media (min-width: 101.875em) {
+      column-gap: 5rem;
+    }
+  }
+
+  &__text {
+  }
+
+  &__column {
+  }
+
+  &__item {
+  }
+
+  .item-faq {
+    padding: 1.25rem 1.625rem;
+
+    @media (min-width: 48em) and (max-width: 101.875em) {
+      padding: 1.5rem 2.5rem;
+    }
+    @media (min-width: 101.875em) {
+      padding: 2.125rem 3.4375rem;
+    }
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 0.0625rem;
+      background: linear-gradient(90deg, rgba(229, 0, 0, 0) 0%, #e50000 16.67%, rgba(229, 0, 0, 0) 100%);
+    }
+
+    &__title {
+      cursor: pointer;
+      transition-duration: 0.3s;
+      padding-inline: 1rem;
+      color: #fff;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%; /* 27px */
+      margin-bottom: 0.75rem;
+
+      @media (min-width: 48em) and (max-width: 101.875em) {
+        font-size: 1.25rem;
+        margin-bottom: px;
+      }
+      @media (min-width: 101.875em) {
+        font-size: 1.375rem;
+        padding-inline: 1.25rem;
+        margin-bottom: 1.25rem;
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: #b10505;
+          transition-duration: 0.4s;
+        }
+      }
+    }
+
+    &__content {
+      color: #999;
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 27px */
+
+      @media (min-width: 48em) and (max-width: 101.875em) {
+        font-size: 1rem;
+      }
+      @media (min-width: 101.875em) {
+        font-size: 1.125rem;
+        // padding-inline: 1.25rem;
+      }
+    }
+  }
+}

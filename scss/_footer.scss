@@ -1,0 +1,101 @@
+.footer {
+  background-color: #0f0f0f;
+  padding-block-start: 6.25rem;
+  padding-block-end: 3.125rem;
+
+  &__links {
+    display: grid;
+    gap: 1.875rem;
+    margin-bottom: 6.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+    @media (min-width: 43.125em) and (max-width: 101.875em) {
+      gap: 1.25rem;
+    }
+    @media (max-width: 43.125em) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9375rem;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    border-top: 0.0625rem solid #262626;
+  }
+}
+.links {
+  &__heading {
+    color: #fff;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 30px */
+    margin-bottom: 1.5rem;
+    @media (min-width: 48em) and (max-width: 101.875em) {
+      font-size: 1.125rem;
+    }
+    @media (min-width: 101.875em) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__list--icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.875rem;
+  }
+  &__link--icon {
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    border: 0.0625rem solid #262626;
+    background-color: #1a1a1a;
+    padding: 1rem;
+    transition-duration: 0.3s;
+  }
+  &__link--icon:hover {
+    background-color: #2a2929;
+    transition-duration: 0.4s;
+  }
+
+  &__item {
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 27px */
+    transition-duration: 0.4s;
+  }
+  &__item:hover {
+    color: #fff;
+    transition-duration: 0.3s;
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 0.875rem;
+  }
+}
+.info {
+  &__text {
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+  }
+
+  &__item {
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+    transition-duration: 0.4s;
+  }
+
+  &__item:hover {
+    color: #fff;
+    transition-duration: 0.3s;
+  }
+}
