@@ -10,6 +10,16 @@ function windowLoad() {
   slidersInit()
 }
 
+const logo = document.querySelector('#scroll-up')
+
+logo.addEventListener('click', function (event) {
+  event.preventDefault()
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  })
+})
+
 function documentActions(e) {
   const type = e.type
   const targetElement = e.target
